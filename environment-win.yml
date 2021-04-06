@@ -1,0 +1,22 @@
+#Create environment using:
+#$ conda env create --file=file-name.yml
+#We assume the environment has a gpu.
+# This environment is functional on windows.
+name: calhousing
+channels:
+  - conda-forge
+  - defaults
+  - anaconda
+dependencies:
+- python=3.8
+- pip=21
+- jupyter==1.0.0
+- cudnn=7
+- dtale==1.36.0
+- scikit-learn==0.24.1
+- pip:
+  - mlflow==1.14.0
+  - tensorflow-gpu==2.2.1
+  - matplotlib==3.1.2
+  - kaggle==1.5.12
+  - seaborn==0.11.1
